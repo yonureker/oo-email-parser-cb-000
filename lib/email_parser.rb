@@ -12,9 +12,7 @@ class EmailParser
   end
   
   def parse
-    @emails.split(/[\s,]+/).each do |i|
-      i
-    end
+    @emails.split(/[\s,]+/).uniq.each {|i| i}
   end
   
 end 
